@@ -1,0 +1,86 @@
+<!DOCTYPE html<html lang="en"><head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Valentine</title>
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+       background-color: #f0f0f0;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(bc.jpg);
+     }
+     .main {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding: 0 20px;
+       width: 40%;
+       height: 80%;
+       border-radius: 250px;
+       background-color: rgba(226, 133, 191, 0.8);
+     }
+     .gif {
+       text-align: center;
+       margin-bottom: 20px;
+     }
+     .gif img {
+       width: 100%;
+       max-width: 400px;
+     }
+     .button {
+       display: flex;
+       justify-content: center;
+     }
+     .button button {
+       background-color: pink;
+       border: none;
+       color: white;
+       padding: 15px 32px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 16px;
+       margin: 4px 2px;
+       cursor: pointer;
+       transition: font-size 0.2s ease-in-out;
+     }
+     #no {
+       background-color: grey;
+     }
+   </style>
+ </head>
+ <body>
+   <div class="main">
+     <div class="gif">
+       <img src="image.gif" alt="Description of the image">
+       <h2>Would you be my valentine?</h2>
+     </div>
+     <div class="button">
+       <button id="yes">YES</button>
+       <button id="no">NO</button>
+     </div>
+   </div>
+   <script>
+     const noButton = document.getElementById("no");
+     const yesButton = document.getElementById("yes");
+     let noCount = 0;
+     noButton.addEventListener("click", function() {
+       noCount++;
+       if (noCount === 5) {
+         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUKaT1yaWNrcm9sbA%3D%3D";
+         noCount = 0;
+       } else {
+         yesButton.style.fontSize = parseFloat(getComputedStyle(yesButton).fontSize) + 30 + "px";
+       }
+     });
+     yesButton.addEventListener("click", function() {
+       window.location.href = "https://www.youtube.com/watch?v=SY1mpDRgF4U&pp=ygUPc3Vzc3kgYmFrYSBzb25n";
+     });
+   </script>
+ </body>
+ </html>
